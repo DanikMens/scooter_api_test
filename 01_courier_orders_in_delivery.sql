@@ -1,0 +1,7 @@
+SELECT c.login, COUNT(o.id) AS orders_in_delivery
+FROM "Couriers" AS c
+LEFT JOIN "Orders" AS o
+    ON o."courierId" = c.id
+    AND o."inDelivery" IS TRUE
+GROUP BY c.login
+ORDER BY c.login;

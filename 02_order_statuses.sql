@@ -1,0 +1,10 @@
+SELECT
+    track,
+    CASE
+        WHEN finished IS TRUE THEN 2
+        WHEN cancelled IS TRUE THEN -1
+        WHEN "inDelivery" IS TRUE THEN 1
+        ELSE 0
+    END AS status
+FROM "Orders"
+ORDER BY track;
