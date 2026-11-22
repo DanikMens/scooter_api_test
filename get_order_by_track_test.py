@@ -1,3 +1,5 @@
+# Даниил Меньшиков, 50-я когорта — финальный проект «Яндекс Самокат»
+
 import configuration
 import data
 import sender_stand_request
